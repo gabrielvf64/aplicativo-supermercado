@@ -22,7 +22,6 @@ export class PickAddressPage {
     if (localUser && localUser.email) {
       this.clienteService.findByEmail(localUser.email)
         .subscribe(response => {
-          console.log('response', response)
           this.items = response['enderecos'];
         },
           error => {
