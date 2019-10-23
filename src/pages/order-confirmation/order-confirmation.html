@@ -25,7 +25,7 @@
       </ion-item>
 
       <ion-item>
-        <h2>Total da compra</h2>
+        <h2>Valor total da compra</h2>
         <h2 item-end>{{ total() | currency }}</h2>
       </ion-item>
     </ion-list>
@@ -69,4 +69,9 @@
       <h3>Pagamento com boleto</h3>
     </ion-item>
   </ion-card>
+
+  <button ion-button block (click)="checkout()">Finalizar pedido</button>
+  <button ion-button block outline (click)="back()">
+    Voltar ao carrinho
+  </button>
 </ion-content>
