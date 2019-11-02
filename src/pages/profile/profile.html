@@ -19,7 +19,7 @@
 
   <ion-card>
     <ion-card-header>
-      Enviar imagem de perfil
+      Enviar foto de perfil
     </ion-card-header>
     <ion-item *ngIf="picture">
       <img [src]="picture" />
@@ -32,6 +32,12 @@
         [disabled]="cameraOn"
       >
         Camera
+      </button>
+      <button *ngIf="picture" ion-button outline block (click)="sendPicture()">
+        Enviar foto
+      </button>
+      <button *ngIf="picture" ion-button outline block (click)="cancel()">
+        Descartar foto
       </button>
     </ion-item>
   </ion-card>
